@@ -1,12 +1,37 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import Login from './auth/Login'
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import MainLayout from './MainLayout'
+import Signup from './auth/Signup'
+
+const appRoute = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    // children=[
+    //   {
+    //     path:"/login"
+    //   }
+    // ]
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+]);
 
 function App() {
 
   return (
-    <>
-      <Button>Lets build food App</Button>
-    </>
+    <main>
+      <RouterProvider router={appRoute}>
+
+      </RouterProvider>
+    </main>
   )
 }
 
