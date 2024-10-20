@@ -109,11 +109,15 @@ const Login = () => {
               Login
             </Button>
           )}
+
+          <div className="mt-4">
+            <Link to="/forgot-password" className="hover:text-blue-500 hover:underline text-sm">Forgot Password?</Link>
+          </div>
         </div>
 
         <Separator />
         <p className="mt-2">Don't have an account? </p>
-        <Link to="/signup" className="text-blue-500">
+        <Link to="/signup" className="text-blue-500 text-sm">
           Signup
         </Link>
       </form>
